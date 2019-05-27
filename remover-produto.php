@@ -4,16 +4,7 @@ include("conecta.php");
 include("banco-produto.php"); 
 
 $id = $_GET["id"];
-if(removeProduto($conexao, $id)){  ?>
-    <p class="text-success">
-    Removido com sucesso!    
-    </p>
-<?php 
-}else{     
-    $msg = mysqli_error($conexao);
-    ?>
-    <p class="text-danger"> O produto não foi removido: <?= $msg ?>  </p>
-<?php
-}
+removeProduto($conexao, $id);
+header("Location: listar-produtos.php?removido=true");
+die();
 ?>
-<?php include("rodape.php"); ?>
