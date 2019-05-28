@@ -1,7 +1,10 @@
-<?php include("cabecalho.php"); ?>
+<?php include("cabecalho.php"); 
+include("conecta.php"); 
+include("banco-categoria.php"); 
+?>
 
 <h1>Formulário de cadastro</h1>
-<form action="adiciona-produto.php">
+<form action="adiciona-produto.php" method="POST">
     <table class="table">
         <tr>
             <td>Nome</td> 
@@ -10,6 +13,16 @@
         <tr>
             <td>Preço</td>
             <td><input class="form-control" type="number" name="preco" /></td>
+        </tr>
+        <tr>
+            <td>Descrição</td>
+            <td><textarea class="form-control" name="descricao"> </textarea></td>
+        </tr>
+        <tr>
+            <td>Categoria</td>
+            <td>
+            
+            </td>
         </tr>
         <tr>
             <td><button class="btn btn-primary" type="submit">Cadastrar</button></td>

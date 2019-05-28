@@ -17,8 +17,12 @@ include("banco-produto.php");
         <tr>
             <td><?=$produto['nome']?></td>
             <td><?=$produto['preco']?></td>
+            <td><?=substr($produto['descricao'], 0, 40)?></td>
             <td>
-                <a href="remover-produto.php?id=<?=$produto['id']?>"><button class="btn btn-danger">Remover</button></a>                
+                <form action="remover-produto.php" method="POST">
+                    <input type="hidden" name="id" value="<?=$produto['id']?>">
+                    <button class="btn btn-danger">Remover</button>             
+                </form>
             </td>
             
         </tr>
