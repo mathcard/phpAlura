@@ -21,3 +21,11 @@ create TABLE categorias (
 insert into categorias values 
 (DEFAULT, 'Automoveis'),
 (DEFAULT, 'Esportes');
+(DEFAULT, 'ELetronicos'),
+(DEFAULT, 'Outros');
+
+
+alter table produtos add column categoria_id integer;
+update produtos set categoria_id = 1;
+
+
