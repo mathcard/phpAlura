@@ -28,4 +28,6 @@ insert into categorias values
 alter table produtos add column categoria_id integer;
 update produtos set categoria_id = 1;
 
+alter table produtos add column usado boolean default false;
+
 
