@@ -33,7 +33,7 @@ $categorias = listaCategorias($conexao);
                     <?php endforeach ?>
             </select>
             </td>
-        </tr>
+        </tr>        
         <tr>
             <td><button class="btn btn-primary" type="submit">Cadastrar</button></td>
         </tr>
